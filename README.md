@@ -16,6 +16,7 @@ public void testInvalidTaskId() {
         new Task(tooLongId, name, description); // taskId too long
     });
 }
+
 Ensuring the technical soundness of my code was another challenge. I attempted to cover all bases by conducting careful checks and validations in both the service and test classes. Whether I was checking the right retrieval of a job in the TaskServiceTest class or assuring data integrity with each test case, I kept the codebase intact.
 Efficiency was also an important aspect of my testing strategy. I wanted to shorten the testing process while maintaining completeness by designing concise and targeted test methods that addressed specific functionalities and restrictions. For example, the testAddDuplicateTask() method efficiently added a job and prevented duplicates, demonstrating an excellent strategy to testing several features of the service at the same time.
 
@@ -24,6 +25,7 @@ public void testAddDuplicateTask() {
     service.addTask(task);
     assertFalse(service.addTask(task)); // Duplicate ID should not be allowed
 }
+
 Reflection
 Throughout this project, a combination of software testing techniques was employed. Extensive unit testing and test-driven development (TDD) techniques were utilized. Unit testing allowed for the thorough examination of individual components, ensuring that each method within each class behaved as expected. Meanwhile, TDD guided the development process, with tests being written before implementing the functionality. This approach ensured that the resulting code met the specified requirements outlined in the project specifications.
 The focus eventually shifted primarily to JUnit testing. JUnit facilitated the automation of the testing process, enabling the easy execution of tests and providing clear feedback on the success or failure of each test case. While integration testing, which involves testing the interaction between different components or modules of a system, was not employed in these milestones, it would have been valuable to verify that each class interact correctly.
